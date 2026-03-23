@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/app-icon.png" alt="BlinkPass Protocol Logo" width="400" />
+  <img src="./assets/app-icon.png" alt="BlinkPass Protocol Logo" width="250" />
 </p>
 <h1 align="center">BlinkPass Protocol 🎟️⚡</h1>
 <br/>
