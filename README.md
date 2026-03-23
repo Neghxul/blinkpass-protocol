@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="./assets/app-icon.png" alt="BlinkPass Protocol Logo" width="400" />
+</p>
+
+<h1 align="center">BlinkPass Protocol 🎟️⚡</h1>
+<p align="center">
+  <em>Boletos inmutables, cero comisiones de terceros y validación criptográfica en la puerta.</em>
+</p>
+
+<br/>
+
 # 🎟️ BlinkPass Protocol  
 ### Decentralized Ticketing & On-Chain Access Management
 
