@@ -18,7 +18,8 @@ import {
   Vibration, 
   View, 
   ActivityIndicator, 
-  FlatList 
+  FlatList, 
+  Image
 } from 'react-native';
 import { Connection, PublicKey, clusterApiUrl, Keypair } from '@solana/web3.js';
 import { Program, AnchorProvider } from '@coral-xyz/anchor';
@@ -26,6 +27,7 @@ import { router } from 'expo-router';
 import idl from '../../blink_pass_pro.json'; 
 import { supabase } from '../../src/lib/supabase';
 
+const BlinkPassLogo = require('@/assets/images/logo.png');
 type AppState = 'LISTA_EVENTOS' | 'DETALLE_EVENTO' | 'ESCANER' | 'VALIDANDO' | 'EXITO' | 'ERROR';
 
 export default function ValidatorApp() {
@@ -267,7 +269,7 @@ export default function ValidatorApp() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#000' 
+    backgroundColor: '#141823' 
   },
   center: { 
     justifyContent: 'center', 

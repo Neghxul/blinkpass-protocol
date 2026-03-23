@@ -8,13 +8,25 @@ global.Buffer = Buffer;
 
 import React, { useState, useEffect } from 'react';
 import { 
-  View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, TextInput, ActivityIndicator, KeyboardAvoidingView, Platform 
+  View, 
+  Text, 
+  StyleSheet, 
+  ScrollView, 
+  TouchableOpacity, 
+  Alert, 
+  TextInput, 
+  ActivityIndicator, 
+  KeyboardAvoidingView, 
+  Platform, 
+  Image 
 } from 'react-native';
 import { Connection, PublicKey, clusterApiUrl, Keypair } from '@solana/web3.js';
 import { Program, AnchorProvider, BN } from '@coral-xyz/anchor';
 import * as anchor from '@coral-xyz/anchor';
 import { supabase } from '../../src/lib/supabase';
 import idl from '../../blink_pass_pro.json'; 
+
+const BlinkPassLogo = require('@/assets/images/logo.png');
 
 export default function DashboardAdmin() {
   const [balance, setBalance] = useState<number | null>(null);
@@ -138,8 +150,12 @@ export default function DashboardAdmin() {
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ flex: 1 }}>
       <ScrollView style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Admin Panel</Text>
-          <Text style={styles.headerSub}>BlinkPass Protocol • Devnet</Text>
+          <Image 
+            source={BlinkPassLogo} 
+            style={styles.logoImage} 
+            resizeMode="contain" 
+          />
+          <Text style={styles.headerSub}>Protocol • Devnet</Text>
         </View>
 
         {/* TARJETA DE SALDO PRINCIPAL */}
@@ -195,17 +211,18 @@ export default function DashboardAdmin() {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#000', 
+    backgroundColor: '#141823', 
     padding: 20 
   },
   header: { 
-    marginTop: 50, 
-    marginBottom: 20 
+    marginTop: 60, 
+    marginBottom: 25,
+    alignItems: 'center' 
   },
-  headerTitle: { 
-    fontSize: 34, 
-    fontWeight: '900', 
-    color: '#fff' 
+  logoImage: { 
+    width: 250, 
+    height: 60, 
+    marginBottom: 5 
   },
   headerSub: { 
     fontSize: 16, 
