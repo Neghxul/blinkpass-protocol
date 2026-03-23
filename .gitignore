@@ -1,0 +1,12 @@
+# Node
+node_modules/
+dist/
+.env
+
+# Expo / React Native
+.expo/
+mobile-scanner-app/.expo/
+
+# Rust / Anchor (Smart Contracts)
+target/
+**/*.rs.bk

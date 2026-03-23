@@ -1,0 +1,538 @@
+{
+  "address": "Hu3NBNotayRTYcYzyEy3Gv5M2JGCKjA8EwgRzrV1UnWM",
+  "metadata": {
+    "name": "blink_pass_pro",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "comprar_boleto",
+      "discriminator": [
+        252,
+        218,
+        167,
+        229,
+        194,
+        254,
+        122,
+        43
+      ],
+      "accounts": [
+        {
+          "name": "comprador",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "evento",
+          "writable": true
+        },
+        {
+          "name": "tesoreria",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  101,
+                  115,
+                  111,
+                  114,
+                  101,
+                  114,
+                  105,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              }
+            ]
+          }
+        },
+        {
+          "name": "boleto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  111,
+                  108,
+                  101,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              },
+              {
+                "kind": "arg",
+                "path": "id_boleto"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "id_boleto",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "escanear_acceso",
+      "discriminator": [
+        212,
+        139,
+        132,
+        63,
+        237,
+        73,
+        147,
+        216
+      ],
+      "accounts": [
+        {
+          "name": "validador",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "boleto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  111,
+                  108,
+                  101,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "boleto.evento_vinculado",
+                "account": "Boleto"
+              },
+              {
+                "kind": "arg",
+                "path": "id_boleto"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "_id_boleto",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "inicializar_evento",
+      "discriminator": [
+        178,
+        237,
+        125,
+        228,
+        136,
+        220,
+        97,
+        129
+      ],
+      "accounts": [
+        {
+          "name": "organizador",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "evento",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "organizador"
+              },
+              {
+                "kind": "arg",
+                "path": "id_evento"
+              }
+            ]
+          }
+        },
+        {
+          "name": "tesoreria",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  101,
+                  115,
+                  111,
+                  114,
+                  101,
+                  114,
+                  105,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "id_evento",
+          "type": "string"
+        },
+        {
+          "name": "precio_boleto_lamports",
+          "type": "u64"
+        },
+        {
+          "name": "capacidad_maxima",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "retirar_fondos",
+      "discriminator": [
+        198,
+        220,
+        159,
+        15,
+        90,
+        39,
+        4,
+        252
+      ],
+      "accounts": [
+        {
+          "name": "organizador",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "evento"
+          ]
+        },
+        {
+          "name": "evento",
+          "writable": true
+        },
+        {
+          "name": "tesoreria",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  101,
+                  115,
+                  111,
+                  114,
+                  101,
+                  114,
+                  105,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "transferir_boleto",
+      "discriminator": [
+        77,
+        39,
+        179,
+        8,
+        125,
+        244,
+        103,
+        51
+      ],
+      "accounts": [
+        {
+          "name": "dueno_actual",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "nuevo_dueno"
+        },
+        {
+          "name": "evento"
+        },
+        {
+          "name": "tesoreria",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  116,
+                  101,
+                  115,
+                  111,
+                  114,
+                  101,
+                  114,
+                  105,
+                  97
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              }
+            ]
+          }
+        },
+        {
+          "name": "boleto",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  98,
+                  111,
+                  108,
+                  101,
+                  116,
+                  111
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "evento"
+              },
+              {
+                "kind": "arg",
+                "path": "id_boleto"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "_id_boleto",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Boleto",
+      "discriminator": [
+        14,
+        79,
+        153,
+        183,
+        137,
+        255,
+        37,
+        165
+      ]
+    },
+    {
+      "name": "Evento",
+      "discriminator": [
+        64,
+        31,
+        246,
+        39,
+        23,
+        6,
+        84,
+        116
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "EventoCerrado",
+      "msg": "El evento ya no acepta compras."
+    },
+    {
+      "code": 6001,
+      "name": "SoldOut",
+      "msg": "Capacidad máxima alcanzada. Sold Out."
+    },
+    {
+      "code": 6002,
+      "name": "BoletoInvalido",
+      "msg": "ALERTA: Este boleto ya fue escaneado o ha sido reembolsado."
+    },
+    {
+      "code": 6003,
+      "name": "TransferenciaProhibida",
+      "msg": "No puedes revender un boleto que ya fue escaneado en la puerta."
+    },
+    {
+      "code": 6004,
+      "name": "NoEsElDueno",
+      "msg": "Alerta de Seguridad: No eres el dueño criptográfico de este boleto."
+    },
+    {
+      "code": 6005,
+      "name": "NoEsElOrganizador",
+      "msg": "Alerta de Seguridad: Solo el organizador original puede retirar los fondos."
+    },
+    {
+      "code": 6006,
+      "name": "TesoreriaVacia",
+      "msg": "La tesorería está vacía. No hay fondos para retirar."
+    }
+  ],
+  "types": [
+    {
+      "name": "Boleto",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "dueno",
+            "type": "pubkey"
+          },
+          {
+            "name": "evento_vinculado",
+            "type": "pubkey"
+          },
+          {
+            "name": "id_boleto",
+            "type": "string"
+          },
+          {
+            "name": "estado",
+            "type": {
+              "defined": {
+                "name": "EstadoBoleto"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "EstadoBoleto",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Valido"
+          },
+          {
+            "name": "Escaneado"
+          },
+          {
+            "name": "Reembolsado"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Evento",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "organizador",
+            "type": "pubkey"
+          },
+          {
+            "name": "id_evento",
+            "type": "string"
+          },
+          {
+            "name": "precio_boleto",
+            "type": "u64"
+          },
+          {
+            "name": "capacidad_maxima",
+            "type": "u64"
+          },
+          {
+            "name": "boletos_vendidos",
+            "type": "u64"
+          },
+          {
+            "name": "tesoreria_bump",
+            "type": "u8"
+          },
+          {
+            "name": "activo",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ]
+}
