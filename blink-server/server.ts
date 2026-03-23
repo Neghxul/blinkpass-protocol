@@ -26,12 +26,12 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 const idl = JSON.parse(fs.readFileSync('./blink_pass_pro.json', 'utf-8'));
 
 // DATOS DEL EVENTO
-const EVENTO_PDA = "3XnxJBTFLrX5ufd7MuJfzWXQXtySQavcduVMLGtkv4rC";
+const EVENTO_PDA = "4F819GNZiu8gRVZoC9v9PUba84iT6sNZPuygXiDzXC4a";
 
 // INFORMACIÓN DEL EVENTO
 app.get('/api/blink', (req: Request, res: Response) => {
   const payload = {
-    title: "Cradle of Filth VIP",
+    title: "Gran Final 2026",
     icon: "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
     description: "Pase inmutable como NFT en Devnet. Valida en puerta con BlinkPass Protocol.",
     label: "Comprar",
@@ -40,7 +40,7 @@ app.get('/api/blink', (req: Request, res: Response) => {
         {
           label: "Comprar Ticket ◎ 0.1 SOL",
           // LINK DE CLOUDFLARE ACTIVO
-          href: "https://you-log-elect-something.trycloudflare.com/api/blink", 
+          href: "https://pcs-sides-forecasts-villages.trycloudflare.com/api/blink", 
           type: "transaction" as any
         }
       ]

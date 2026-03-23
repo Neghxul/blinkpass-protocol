@@ -58,6 +58,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 ## 📱 1. Levantar App Móvil
 
 ```bash
+cd mobile-scanner-pro
 npm install
 npx expo start
 ```

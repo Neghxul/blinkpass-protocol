@@ -3,6 +3,7 @@ import React from 'react';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -27,6 +28,13 @@ export default function TabLayout() {
         options={{
           title: 'Panel Admin',
           tabBarIcon: ({ color }) => <Ionicons size={28} name="briefcase-outline" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: 'About',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="user-astronaut" size={22} color={color} />,
         }}
       />
     </Tabs>
