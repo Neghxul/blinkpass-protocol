@@ -189,9 +189,3 @@ Desde la App móvil:
 
 Pull requests son bienvenidos.  
 Para cambios grandes, abre un issue primero.
-
----
-
-## Licencia
-
-MIT
