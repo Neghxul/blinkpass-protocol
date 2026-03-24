@@ -12,7 +12,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ---
 
-## ✨ Features
+## Features
 
 - Venta de boletos como NFTs (On-Chain)
 - Compra directa desde redes sociales (Blinks)
@@ -23,7 +23,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ---
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ### 🔹 Smart Contracts (Rust / Anchor)
 - Gestión de tesorería (Escrow)
@@ -45,7 +45,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerrequisitos
 
@@ -55,7 +55,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ---
 
-## 📱 1. Levantar App Móvil
+## 1. Levantar App Móvil
 
 ```bash
 cd mobile-scanner-pro
@@ -74,7 +74,7 @@ npx expo start
 
 ---
 
-## 🌐 2. Levantar Servidor (Blinks)
+## 2. Levantar Servidor (Blinks)
 
 ```bash
 cd blink-server
@@ -90,7 +90,7 @@ http://localhost:8080
 
 ---
 
-## 🌍 3. Exponer API (Cloudflare Tunnel)
+## 3. Exponer API (Cloudflare Tunnel)
 
 ```bash
 npx cloudflared tunnel --url http://localhost:8080
@@ -112,7 +112,7 @@ npx tsx server.ts
 
 ---
 
-## 🧪 4. Flujo de Compra (Usuario)
+## 4. Flujo de Compra (Usuario)
 
 1. Ir a: https://dial.to  
 2. Pegar URL:
@@ -136,7 +136,7 @@ https://tu-link.trycloudflare.com/api/blink
 
 ---
 
-## 💸 5. Retiro de Fondos (Cash Out)
+## 5. Retiro de Fondos (Cash Out)
 
 Desde la App móvil:
 
@@ -151,7 +151,7 @@ Desde la App móvil:
 
 ---
 
-## 🛡️ Seguridad
+## Seguridad
 
 - Máquina de estados por ticket:
   - ✅ Válido  
@@ -192,6 +192,6 @@ Para cambios grandes, abre un issue primero.
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 MIT
