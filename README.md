@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./assets/app-icon.png" alt="BlinkPass Protocol Logo" width="250" />
 </p>
-<h1 align="center">BlinkPass Protocol 🎟️⚡</h1>
+<h1 align="center">BlinkPass Protocol</h1>
 <br/>
 
 ### Decentralized Ticketing & On-Chain Access Management
@@ -14,12 +14,12 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ## ✨ Features
 
-- 🎫 Venta de boletos como NFTs (On-Chain)
-- ⚡ Compra directa desde redes sociales (Blinks)
-- 📱 App móvil para administración de eventos
-- 💰 Regalías automáticas en reventa (10%)
-- 🔐 Validación de boletos (anti-duplicado)
-- 🏦 Escrow descentralizado para fondos
+- Venta de boletos como NFTs (On-Chain)
+- Compra directa desde redes sociales (Blinks)
+- App móvil para administración de eventos
+- Regalías automáticas en reventa (10%)
+- Validación de boletos (anti-duplicado)
+- Escrow descentralizado para fondos
 
 ---
 
@@ -47,7 +47,7 @@ Además, incorpora un sistema de **regalías automáticas (10%) en mercado secun
 
 ## 🚀 Getting Started
 
-### 📋 Prerrequisitos
+### Prerrequisitos
 
 - Node.js v18+
 - Phantom Wallet (configurada en **Devnet**)
@@ -165,7 +165,7 @@ Desde la App móvil:
 
 ---
 
-## 📦 Stack Tecnológico
+## Stack Tecnológico
 
 - **Blockchain:** Solana (Rust + Anchor)
 - **Backend:** Node.js + Express + TSX
@@ -175,7 +175,7 @@ Desde la App móvil:
 
 ---
 
-## 🧠 Roadmap
+## Roadmap
 
 - [ ] Integración con QR dinámico
 - [ ] Dashboard web para analytics
@@ -185,7 +185,7 @@ Desde la App móvil:
 
 ---
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Pull requests son bienvenidos.  
 Para cambios grandes, abre un issue primero.
